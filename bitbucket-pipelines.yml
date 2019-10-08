@@ -1,0 +1,36 @@
+# This is a sample build configuration for PHP.
+# Check our guides at https://confluence.atlassian.com/x/e8YWN for more examples.
+# Only use spaces to indent your .yml configuration.
+# -----
+# You can specify a custom docker image from Docker Hub as your build environment.
+image: php:7.1.29
+
+pipelines:
+  default:
+    - step:
+        caches:
+          - composer
+        script:
+          - pipe: atlassian/aws-code-deploy:0.2.9
+            variables:
+              AWS_ACCESS_KEY_ID: 'AKIAJMNFO2QNNRZFFXZA'
+              AWS_SECRET_ACCESS_KEY: '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'
+              AWS_DEFAULT_REGION: 'us-east-2'
+              APPLICATION_NAME: 'emtehanak'
+              COMMAND: 'deploy' # 'upload' or 'deploy'.
+
+              # Common variables
+              # S3_BUCKET: '<string>' # Optional.
+              # VERSION_LABEL: '<string>' # Optional.
+              # DEBUG: '<boolean>' # Optional.
+
+              # Upload variables
+              # ZIP_FILE: '<string>'
+
+              # Deploy variables
+              # DEPLOYMENT_GROUP: '<string>'
+              # FILE_EXISTS_BEHAVIOR: '<string>' # Optional.
+              # IGNORE_APPLICATION_STOP_FAILURES: '<boolean>' # Optional.
+              # WAIT: '<boolean>' # Optional.
+              # EXTRA_ARGS: '<string>' # Optional.
+
