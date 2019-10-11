@@ -3,8 +3,8 @@
 # Set permissions to storage and bootstrap cache
 sudo chmod -R 0777 /var/www/html/storage
 sudo chmod -R 0777 /var/www/html/bootstrap/cache
+sudo curl -sS https://getcomposer.org/installer | sudo php
+sudo mv composer.phar /usr/local/bin/composer
+sudo ln -s /usr/local/bin/composer /usr/bin/composer
 cd /var/www/html
-sudo php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
-sudo php -r "if (hash_file('sha384', 'composer-setup.php') === '93b54496392c062774670ac18b134c3b3a95e5a5e5c8f1a9f115f203b75bf9a129d5daa8ba6a13e2cc8a1da0806388a8') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
-php composer-setup.php
-php composer.phar install
+sudo composer install
