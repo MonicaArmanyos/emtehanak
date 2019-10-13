@@ -9,3 +9,6 @@ sudo ln -s /usr/local/bin/composer /usr/bin/composer
 sudo chown $USER /var/www/html -R #bdal webapp
 cd /var/www/html
 composer install
+
+mv .env.example  .env
+php artisan key:generate
