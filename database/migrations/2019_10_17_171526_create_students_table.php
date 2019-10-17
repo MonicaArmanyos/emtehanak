@@ -15,10 +15,11 @@ class CreateStudentsTable extends Migration
     {
         Schema::create('students', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->bigInteger('level_id')->unsigned();
             $table->foreign('level_id')->references('id')->on('levels');
             $table->string('name');
             $table->datetime('installation_time');
-            $table->string('phone',11);
+            $table->string('phone',11)->unique();
             $table->timestamps();
         });
     }
