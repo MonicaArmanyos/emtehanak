@@ -11,10 +11,10 @@ class LevelsTableSeeder extends Seeder
      */
     public function run()
     {
-        Level::firstOrCreate(['senior_year'=>'الاول']);
-        Level::firstOrCreate(['senior_year'=>'الثاني','specialization'=>'العلمي']);
-        Level::firstOrCreate(['senior_year'=>'الثاني','specialization'=>'الادبي']);
-        Level::firstOrCreate(['senior_year'=>'الثالث','specialization'=>'العلمي']);
-        Level::firstOrCreate(['senior_year'=>'الثالث','specialization'=>'الادبي']);
+        Level::firstOrCreate(["senior_year"=>"الاول"]);
+        Level::firstOrCreate(["senior_year"=>"الثاني","specialization"=>"العلمي"]);
+        Level::firstOrCreate(["senior_year"=>"الثاني","specialization"=>"الادبي"]);
+        Level::firstOrCreate(["senior_year"=>"الثالث","specialization"=>"العلمي"]);
+        Level::firstOrCreate(["senior_year"=>"الثالث","specialization"=>"الادبي"]);
     }
 }
