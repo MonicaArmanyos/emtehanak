@@ -14,4 +14,4 @@ hooks:
           runas: root
         - location: scripts/migrate_db.sh
           timeout: 300
-          runas: root  
+          runas: ec2-user  
