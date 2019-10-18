@@ -8,4 +8,4 @@ sudo chown -R ec2-user:ec2-user /var/www/html/
 cd /var/www/html
 composer install
 mv .env.example  .env
-php artisan key:generate
+# php artisan key:generate
