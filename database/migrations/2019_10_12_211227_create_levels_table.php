@@ -16,7 +16,7 @@ class CreateLevelsTable extends Migration
         Schema::create('levels', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->enum('senior_year', ['الثالث', 'الثاني','الاول']);
-            $table->string('specialization');
+            $table->string('specialization')->nullable();
             $table->timestamps();
         });
     }
