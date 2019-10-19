@@ -6,6 +6,6 @@ php artisan migrate
 php artisan db:seed 
 
 #clearing cache
-php artisan config:caches
+php artisan config:cache
 
 
