@@ -7,5 +7,5 @@ sudo ln -s /usr/local/bin/composer /usr/bin/composer
 sudo chown -R ec2-user:ec2-user /var/www/html/ 
 cd /var/www/html
 composer install
-mv .env.example  .env
+cp .env.example  .env
 php artisan key:generate

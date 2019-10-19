@@ -1,5 +1,7 @@
 #!/bin/bash
-
+echo echo "$USER"
+pwd
+cd /var/www/html
 # Run artisan commands
-php /var/www/html/artisan migrate
-php /var/www/html/artisan db:seed 
+php artisan migrate
+php artisan db:seed 
