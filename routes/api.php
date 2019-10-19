@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Resources\Error;
 use Illuminate\Http\Request;
 
 /*
@@ -13,6 +14,6 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+Route::group(['prefix' => 'v1','namespace'=>'V1'], function () {
+    Route::apiResource('students', 'StudentController')->only(['show']);
 });

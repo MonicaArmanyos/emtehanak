@@ -1,9 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\V1;
 
+use App\Http\Controllers\Controller;
 use App\Student;
 use Illuminate\Http\Request;
+use App\Http\Resources\Student as StudentResource;
+use App\Repositories\Interfaces\IStudentRepository;
 
 class StudentController extends Controller
 {
@@ -41,12 +44,13 @@ class StudentController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Student  $student
+     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function show(Student $student)
+    public function show(Request $request,IStudentRepository $studentRepository)
     {
-        //
+       
+        return new StudentResource($studentRepository->getBy($request->student));
     }
 
     /**
