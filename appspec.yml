@@ -16,7 +16,7 @@ hooks:
     AfterInstall:
         - location: scripts/install_composer_dependencies.sh
           timeout: 300
-          runas: root
-        - location: scripts/migrate_db.sh
-          timeout: 300
-          runas: ec2-user  
+          runas: ec2-user
+        # - location: scripts/migrate_db.sh
+        #   timeout: 300
+        #   runas: ec2-user  
