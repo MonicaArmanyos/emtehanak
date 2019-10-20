@@ -7,5 +7,6 @@ php artisan db:seed
 
 #clearing cache
 php artisan config:cache
+php artisan optimize:clear
 
 
