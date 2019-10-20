@@ -16,4 +16,5 @@ use Illuminate\Http\Request;
 
 Route::group(['prefix' => 'v1','namespace'=>'V1'], function () {
     Route::apiResource('students', 'StudentController')->only(['show']);
+    Route::apiResource('students.subjects', 'SubjectController')->only(['index']);
 });
