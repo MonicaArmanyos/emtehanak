@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use App\Level;
+
 class LevelsTableSeeder extends Seeder
 {
     /**
@@ -14,7 +15,8 @@ class LevelsTableSeeder extends Seeder
         Level::firstOrCreate(["senior_year"=>"الاول"]);
         Level::firstOrCreate(["senior_year"=>"الثاني","specialization"=>"العلمي"]);
         Level::firstOrCreate(["senior_year"=>"الثاني","specialization"=>"الادبي"]);
-        Level::firstOrCreate(["senior_year"=>"الثالث","specialization"=>"العلمي"]);
+        Level::firstOrCreate(["senior_year"=>"الثالث","specialization"=>"العلمي علوم"]);
+        Level::firstOrCreate(["senior_year"=>"الثالث","specialization"=>"العلمي رياضة"]);
         Level::firstOrCreate(["senior_year"=>"الثالث","specialization"=>"الادبي"]);
     }
 }

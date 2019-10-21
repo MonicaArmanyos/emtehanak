@@ -17,6 +17,6 @@ class Student extends Model
 
     public function subjects()
     {
-        return $this->belongsToMany(Subject::class)->withTimestamps();;
+        return $this->belongsToMany(Subject::class)->withTimestamps();
     }
 }

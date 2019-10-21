@@ -30,5 +30,6 @@ class SubjectsTableSeeder extends Seeder
         Subject::firstOrCreate(["name"=>"التربية المهنية"]);
         Subject::firstOrCreate(["name"=>" الأنشطة التربوية"]);
         Subject::firstOrCreate(["name"=>"الاقتصاد و الاحصاء"]);
+        Subject::firstOrCreate(["name"=>"الجيولوجيا"]);
     }
 }
