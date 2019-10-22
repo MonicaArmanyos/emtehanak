@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use App\Student;
 
 class StudentSubjectsTableSeeder extends Seeder
 {
@@ -11,6 +12,10 @@ class StudentSubjectsTableSeeder extends Seeder
      */
     public function run()
     {
-        //
+        $students = Student::all();
+        foreach ($students as $student)
+        {
+            $student->subjects()->sync($student->level->subjects);
+        }
     }
 }
