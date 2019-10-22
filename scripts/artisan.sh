@@ -9,6 +9,6 @@ php artisan db:seed
 #clearing cache
 composer dump-autoload
 php artisan config:cache
-php artisan optimize:clear
+php artisan optimize
 
 
