@@ -16,8 +16,8 @@ class StudentRepository extends AbstractGenericRepository implements IStudentRep
      * @param string $phone , string $attribute
      * @return Object
      */
-    public function getBy(string $phone,string $attribute="phone")
+    public function getBy(string $simSerialNo,string $attribute="sim_serial_number")
     {
-        return $this->model::where($attribute, $phone)->firstOrFail();
+        return $this->model::where($attribute, $simSerialNo)->firstOrFail();
     }
 }

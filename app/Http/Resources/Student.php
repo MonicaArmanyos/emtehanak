@@ -19,7 +19,7 @@ class Student extends JsonResource
             'name' => $this->name,
             'level_id' => $this->level_id,
             'installation_time' => $this->installation_time,
-            'phone' => $this->phone
+            'sim_serial_number' => $this->sim_serial_number
         ];
     }
 }

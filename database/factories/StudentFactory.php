@@ -12,6 +12,6 @@ $factory->define(Student::class, function (Faker $faker) {
         "name" => $faker->name,
         "level_id" => mt_rand (Level::min('id'),Level::max('id')),
         "installation_time" => Carbon::now(),
-        "phone" =>$faker->unique()->regexify('(01)(0|1|2|5)[0-9]{8}')
+        "sim_serial_number" =>$faker->unique()->regexify('(89)[A-Za-z0-9]{18}')
     ];
 });

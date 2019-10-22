@@ -19,7 +19,7 @@ class CreateStudentsTable extends Migration
             $table->foreign('level_id')->references('id')->on('levels');
             $table->string('name');
             $table->datetime('installation_time');
-            $table->string('phone',11)->unique();
+            $table->string('sim_serial_number',20)->unique();
             $table->timestamps();
         });
     }
