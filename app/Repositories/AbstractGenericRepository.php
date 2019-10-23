@@ -22,4 +22,13 @@ abstract class AbstractGenericRepository implements IGenericRepository
     {
         $this->model = $model;
     }
+
+    /**
+     * @param  $$value, string $attribute
+     * @return Object
+     */
+    public function getBy($value,string $attribute)
+    {
+        return $this->model::where($attribute, $value)->firstOrFail();
+    }
 }

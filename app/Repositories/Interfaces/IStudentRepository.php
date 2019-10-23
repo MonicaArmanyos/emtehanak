@@ -10,9 +10,5 @@ use App\Repositories\Interfaces\IGenericRepository;
 
 interface IStudentRepository extends IGenericRepository
 {
-    /**
-     * @param string $phone, string $attribute
-     * @return Object
-     */
-    public function getBy(string $simSerialNo,string $attribute="phone");
+    public function listStudentSubjects($studentId);
 }

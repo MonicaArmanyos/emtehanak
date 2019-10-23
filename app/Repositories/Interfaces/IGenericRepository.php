@@ -10,4 +10,9 @@ namespace App\Repositories\Interfaces;
 interface IGenericRepository
 {
     
+    /**
+     * @param  $value, string $attribute
+     * @return Object
+     */
+    public function getBy($value,string $attribute);
 }

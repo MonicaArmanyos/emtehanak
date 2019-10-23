@@ -12,12 +12,14 @@ use App\Repositories\AbstractGenericRepository;
 
 class StudentRepository extends AbstractGenericRepository implements IStudentRepository
 {
-    /**
-     * @param string $phone , string $attribute
-     * @return Object
-     */
-    public function getBy(string $simSerialNo,string $attribute="sim_serial_number")
+    public function listStudentSubjects($studentId)
     {
-        return $this->model::where($attribute, $simSerialNo)->firstOrFail();
+        $student = $this->getBy($studentId,"Id");
+        $level_id =$student->level->id;
+        $student = $this->model::with(['subjects.levels'=>function($query) use ($level_id){
+            $query->where("levels.id",$level_id);
+        }])->where('id',$student->id)->first();
+    
+        return $student->subjects;
     }
 }

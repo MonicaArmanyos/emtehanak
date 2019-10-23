@@ -50,7 +50,7 @@ class StudentController extends Controller
     public function show(Request $request,IStudentRepository $studentRepository)
     {
        
-        return new StudentResource($studentRepository->getBy($request->student));
+        return new StudentResource($studentRepository->getBy($request->student,"sim_serial_number"));
     }
 
     /**
